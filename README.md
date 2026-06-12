@@ -4,6 +4,8 @@ An interactive **N-body solar system simulator** that runs entirely in the brows
 
 **▶ Live:** https://andreaisabelmontana.github.io/orrery-lab/
 
+> **Not an original idea.** This recreates the concept of an existing project — I didn't invent it. I rebuilt it from scratch, my own way, out of curiosity about how it actually works (and tried to make it a little better along the way).
+
 ## What you can do
 
 - **Run a what-if scenario** — Rogue Planet, No Jupiter, Binary Star, Sun → Black Hole, Double-Mass Sun, Earth at Mars, Heavy Earth
