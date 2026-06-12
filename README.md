@@ -1,8 +1,8 @@
-# Orrery Lab
+# Solar System Simulation
 
 An interactive **N-body solar system simulator** that runs entirely in the browser — no install, no backend, just gravity. Load a "what if?" scenario, build your own system, and watch real orbital dynamics play out.
 
-**▶ Live:** https://andreaisabelmontana.github.io/orrery-lab/
+**▶ Live:** https://andreaisabelmontana.github.io/solar-system-simulation/
 
 > **Not an original idea.** This recreates the concept of an existing project — I didn't invent it. I rebuilt it from scratch, my own way, out of curiosity about how it actually works (and tried to make it a little better along the way).
 
