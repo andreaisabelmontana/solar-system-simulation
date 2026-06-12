@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Orrery Lab — what-if solar system</title>
+  <meta name="description" content="An interactive N-body solar system simulator. Run what-if scenarios, build your own systems, and watch orbits unfold under real gravity." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪐</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="stage"></canvas>
+
+  <header class="hud">
+    <h1>Orrery Lab</h1>
+    <p class="tag" id="clock">t = 0 yr</p>
+  </header>
+
+  <aside class="panel" id="panel">
+    <button class="collapse" id="collapse" title="Hide panel">‹</button>
+
+    <section>
+      <label for="scenario">Scenario</label>
+      <select id="scenario"></select>
+    </section>
+
+    <section class="timebar">
+      <button id="play">⏸ Pause</button>
+      <button id="reset">↺ Reset</button>
+    </section>
+
+    <section>
+      <label>Time speed <span data-out="speed">2.0</span> yr/s</label>
+      <input type="range" id="speed" min="0.2" max="40" step="0.2" value="2" />
+    </section>
+
+    <section>
+      <label for="addtype">Add body (click + drag to set velocity)</label>
+      <select id="addtype">
+        <option value="none">— select / pan —</option>
+        <option value="planet">Planet</option>
+        <option value="giant">Gas giant</option>
+        <option value="star">Star</option>
+        <option value="blackhole">Black hole</option>
+        <option value="comet">Comet</option>
+      </select>
+    </section>
+
+    <section class="toggles">
+      <label class="chk"><input type="checkbox" id="trails" checked /> Orbit trails</label>
+      <label class="chk"><input type="checkbox" id="pauseonevent" /> Pause on event</label>
+    </section>
+
+    <section id="inspector" class="inspector hidden">
+      <h2>Inspector — <span id="insp-name"></span></h2>
+      <div class="row"><span>Semi-major axis</span><b id="insp-a">—</b></div>
+      <div class="row"><span>Eccentricity</span><b id="insp-e">—</b></div>
+      <div class="row"><span>Period</span><b id="insp-T">—</b></div>
+      <label>Mass <span id="insp-massval"></span></label>
+      <input type="range" id="insp-mass" min="-9" max="0.5" step="0.05" />
+      <button id="insp-del" class="del">Delete body</button>
+    </section>
+
+    <section>
+      <h2>Event log</h2>
+      <ul id="log" class="log"></ul>
+    </section>
+
+    <p class="hint">Scroll to zoom · drag to pan · click a body to inspect · <em>Space</em> to pause.</p>
+  </aside>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
